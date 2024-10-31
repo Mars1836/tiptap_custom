@@ -1,0 +1,42 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxtjs/supabase": "^1.4.1",
+    "@nuxtjs/tailwindcss": "^6.12.1",
+    "@tiptap-pro/extension-drag-handle": "^2.11.9",
+    "@tiptap-pro/extension-node-range": "^2.11.9",
+    "@tiptap/extension-bubble-menu": "^2.9.1",
+    "@tiptap/extension-color": "^2.9.1",
+    "@tiptap/extension-document": "^2.9.1",
+    "@tiptap/extension-paragraph": "^2.9.1",
+    "@tiptap/extension-text": "^2.9.1",
+    "@tiptap/extension-typography": "^2.9.1",
+    "@tiptap/extension-underline": "^2.9.1",
+    "@tiptap/pm": "^2.9.1",
+    "@tiptap/starter-kit": "^2.9.1",
+    "@tiptap/vue-3": "^2.9.1",
+    "@trpc/client": "^10.45.2",
+    "@trpc/server": "^10.45.2",
+    "novel": "^0.5.0",
+    "nuxt": "^3.13.0",
+    "trpc-nuxt": "^0.10.22",
+    "vue": "latest",
+    "vue-draggable-next": "^2.2.1",
+    "vue-router": "latest",
+    "vue-tippy": "^6.5.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.15",
+    "sass-embedded": "^1.80.4"
+  }
+}
