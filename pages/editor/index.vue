@@ -43,6 +43,15 @@
         @update:content="(newContent) => updateContent(index, newContent)"
       />
     </div>
+    <div>
+      article_id:
+      <input
+        type="text"
+        class="input"
+        v-model="article_id"
+        placeholder="Nhập article ID"
+      />
+    </div>
     <button @click="saveEditors">Lưu Tất Cả Nội Dung</button>
     <div v-if="htmlContents.length > 0">
       <h2>Nội Dung (HTML):</h2>
@@ -78,6 +87,7 @@ const editors = ref([{ content: { type: "doc", content: [] } }]); // Initialize 
 const jsonContents = ref([]);
 const htmlContents = ref([]);
 const savedContents = ref([]);
+const article_id = ref("");
 const listItems = ref(["a", "a", "b"]);
 // Add a new editor
 const addEditor = () => {
@@ -98,10 +108,15 @@ const removeEditor = (index) => {
 const saveEditors = async () => {
   jsonContents.value = editors.value.map((editor) => editor.content); // Directly store JSON content
   savedContents.value = editors.value.map((editor, index) => {
+    console.log({
+      content: editor.content,
+      order_num: index,
+      article_id: article_id.value,
+    });
     return {
       content: editor.content,
       order_num: index,
-      article_id: "1f109cf9-6ad3-490f-ba35-b90b987f50af",
+      article_id: article_id.value,
     };
   });
   convertListJsonTiptaptoHtml(jsonContents.value);
@@ -123,3 +138,9 @@ const createBlocks = async (articleBlocks) => {
   }
 };
 </script>
+
+<style>
+.input {
+  border: 1px solid black;
+}
+</style>
